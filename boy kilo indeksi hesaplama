@@ -1,0 +1,20 @@
+# Kullanıcıdan boy ve kilo bilgilerini alın
+boy = float(input("Boyunuzu girin (metre cinsinden): "))
+kilo = float(input("Kilonuzu girin (kilogram cinsinden): "))
+
+# Vücut Kitle İndeksi (BMI) hesaplaması
+bmi = kilo / (boy ** 2)
+
+# BMI değerini yorumlayın
+if bmi < 18.5:
+    yorum = "Zayıf"
+elif 18.5 <= bmi < 24.9:
+    yorum = "Normal"
+elif 25.0 <= bmi < 29.9:
+    yorum = "Fazla Kilolu"
+else:
+    yorum = "Obez"
+
+# Sonucu ekrana yazdırın
+print(f"Vücut Kitle İndeksiniz (BMI): {bmi:.2f}")
+print(f"Durumunuz: {yorum}")
